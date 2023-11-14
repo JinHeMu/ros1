@@ -284,6 +284,15 @@ _gtest_INCLUDES:FILEPATH=/usr/include/gtest/gtest.h
 //Path to a file.
 _gtest_SOURCES:FILEPATH=/usr/src/gtest/src/gtest.cc
 
+//The directory containing a CMake configuration file for actionlib_msgs.
+actionlib_msgs_DIR:PATH=/opt/ros/melodic/share/actionlib_msgs/cmake
+
+//Value Computed by CMake
+atr_pkg_BINARY_DIR:STATIC=/home/a/my_ros/build/atr_pkg
+
+//Value Computed by CMake
+atr_pkg_SOURCE_DIR:STATIC=/home/a/my_ros/src/atr_pkg
+
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/melodic/share/catkin/cmake
 
@@ -307,6 +316,9 @@ gennodejs_DIR:PATH=/opt/ros/melodic/share/gennodejs/cmake
 
 //The directory containing a CMake configuration file for genpy.
 genpy_DIR:PATH=/opt/ros/melodic/share/genpy/cmake
+
+//The directory containing a CMake configuration file for geometry_msgs.
+geometry_msgs_DIR:PATH=/opt/ros/melodic/share/geometry_msgs/cmake
 
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/a/my_ros/build/gtest/googlemock
@@ -363,14 +375,44 @@ helloworld_pkg_BINARY_DIR:STATIC=/home/a/my_ros/build/helloworld_pkg
 //Value Computed by CMake
 helloworld_pkg_SOURCE_DIR:STATIC=/home/a/my_ros/src/helloworld_pkg
 
+//Value Computed by CMake
+imu_pkg_BINARY_DIR:STATIC=/home/a/my_ros/build/imu_pkg
+
+//Value Computed by CMake
+imu_pkg_SOURCE_DIR:STATIC=/home/a/my_ros/src/imu_pkg
+
 //Path to a library.
 lib:FILEPATH=/opt/ros/melodic/lib/libxmlrpcpp.so
+
+//Value Computed by CMake
+lidar_pkg_BINARY_DIR:STATIC=/home/a/my_ros/build/lidar_pkg
+
+//Value Computed by CMake
+lidar_pkg_SOURCE_DIR:STATIC=/home/a/my_ros/src/lidar_pkg
+
+//Value Computed by CMake
+map_pkg_BINARY_DIR:STATIC=/home/a/my_ros/build/map_pkg
+
+//Value Computed by CMake
+map_pkg_SOURCE_DIR:STATIC=/home/a/my_ros/src/map_pkg
 
 //The directory containing a CMake configuration file for message_generation.
 message_generation_DIR:PATH=/opt/ros/melodic/share/message_generation/cmake
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/melodic/share/message_runtime/cmake
+
+//The directory containing a CMake configuration file for nav_msgs.
+nav_msgs_DIR:PATH=/opt/ros/melodic/share/nav_msgs/cmake
+
+//Value Computed by CMake
+qq_msgs_BINARY_DIR:STATIC=/home/a/my_ros/build/qq_msgs
+
+//The directory containing a CMake configuration file for qq_msgs.
+qq_msgs_DIR:PATH=/home/a/my_ros/devel/share/qq_msgs/cmake
+
+//Value Computed by CMake
+qq_msgs_SOURCE_DIR:STATIC=/home/a/my_ros/src/qq_msgs
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/melodic/share/rosconsole/cmake
@@ -393,6 +435,21 @@ rospy_DIR:PATH=/opt/ros/melodic/share/rospy/cmake
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/melodic/share/rostime/cmake
 
+//The directory containing a CMake configuration file for sensor_msgs.
+sensor_msgs_DIR:PATH=/opt/ros/melodic/share/sensor_msgs/cmake
+
+//Value Computed by CMake
+slam_pkg_BINARY_DIR:STATIC=/home/a/my_ros/build/slam_pkg
+
+//Value Computed by CMake
+slam_pkg_SOURCE_DIR:STATIC=/home/a/my_ros/src/slam_pkg
+
+//Value Computed by CMake
+ssr_pkg_BINARY_DIR:STATIC=/home/a/my_ros/build/ssr_pkg
+
+//Value Computed by CMake
+ssr_pkg_SOURCE_DIR:STATIC=/home/a/my_ros/src/ssr_pkg
+
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/melodic/share/std_msgs/cmake
 
@@ -413,6 +470,12 @@ test_topic_BINARY_DIR:STATIC=/home/a/my_ros/build/test_topic
 
 //Value Computed by CMake
 test_topic_SOURCE_DIR:STATIC=/home/a/my_ros/src/test_topic
+
+//Value Computed by CMake
+vel_pkg_BINARY_DIR:STATIC=/home/a/my_ros/build/vel_pkg
+
+//Value Computed by CMake
+vel_pkg_SOURCE_DIR:STATIC=/home/a/my_ros/src/vel_pkg
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/melodic/share/xmlrpcpp/cmake
@@ -527,7 +590,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=16
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

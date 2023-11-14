@@ -132,9 +132,17 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/a/my_ros/build/gtest/cmake_install.cmake")
   include("/home/a/my_ros/build/helloworld_pkg/cmake_install.cmake")
+  include("/home/a/my_ros/build/map_pkg/cmake_install.cmake")
+  include("/home/a/my_ros/build/qq_msgs/cmake_install.cmake")
+  include("/home/a/my_ros/build/atr_pkg/cmake_install.cmake")
+  include("/home/a/my_ros/build/slam_pkg/cmake_install.cmake")
+  include("/home/a/my_ros/build/ssr_pkg/cmake_install.cmake")
   include("/home/a/my_ros/build/test_msg/cmake_install.cmake")
   include("/home/a/my_ros/build/test_srv/cmake_install.cmake")
   include("/home/a/my_ros/build/test_topic/cmake_install.cmake")
+  include("/home/a/my_ros/build/imu_pkg/cmake_install.cmake")
+  include("/home/a/my_ros/build/lidar_pkg/cmake_install.cmake")
+  include("/home/a/my_ros/build/vel_pkg/cmake_install.cmake")
 
 endif()
 
