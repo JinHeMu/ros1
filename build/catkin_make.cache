@@ -1,0 +1,2 @@
+helloworld_pkg:test_msg:test_srv:test_topic
+-DCATKIN_DEVEL_PREFIX=/home/a/my_ros/devel -DCMAKE_INSTALL_PREFIX=/home/a/my_ros/install -G Unix Makefiles
