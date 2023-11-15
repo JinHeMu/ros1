@@ -453,6 +453,9 @@ ssr_pkg_SOURCE_DIR:STATIC=/home/a/my_ros/src/ssr_pkg
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/melodic/share/std_msgs/cmake
 
+//The directory containing a CMake configuration file for std_srvs.
+std_srvs_DIR:PATH=/opt/ros/melodic/share/std_srvs/cmake
+
 //Value Computed by CMake
 test_msg_BINARY_DIR:STATIC=/home/a/my_ros/build/test_msg
 
@@ -478,10 +481,19 @@ test_topic_BINARY_DIR:STATIC=/home/a/my_ros/build/test_topic
 test_topic_SOURCE_DIR:STATIC=/home/a/my_ros/src/test_topic
 
 //Value Computed by CMake
+test_turtle_pose_BINARY_DIR:STATIC=/home/a/my_ros/build/test_turtle_pose
+
+//Value Computed by CMake
+test_turtle_pose_SOURCE_DIR:STATIC=/home/a/my_ros/src/test_turtle_pose
+
+//Value Computed by CMake
 test_turtle_vel_BINARY_DIR:STATIC=/home/a/my_ros/build/test_turtle_vel
 
 //Value Computed by CMake
 test_turtle_vel_SOURCE_DIR:STATIC=/home/a/my_ros/src/test_turtle_vel
+
+//The directory containing a CMake configuration file for turtlesim.
+turtlesim_DIR:PATH=/opt/ros/melodic/share/turtlesim/cmake
 
 //Value Computed by CMake
 vel_pkg_BINARY_DIR:STATIC=/home/a/my_ros/build/vel_pkg
@@ -602,7 +614,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=18
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=19
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
