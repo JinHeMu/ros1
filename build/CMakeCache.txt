@@ -460,6 +460,12 @@ test_msg_BINARY_DIR:STATIC=/home/a/my_ros/build/test_msg
 test_msg_SOURCE_DIR:STATIC=/home/a/my_ros/src/test_msg
 
 //Value Computed by CMake
+test_param_srv_BINARY_DIR:STATIC=/home/a/my_ros/build/test_param_srv
+
+//Value Computed by CMake
+test_param_srv_SOURCE_DIR:STATIC=/home/a/my_ros/src/test_param_srv
+
+//Value Computed by CMake
 test_srv_BINARY_DIR:STATIC=/home/a/my_ros/build/test_srv
 
 //Value Computed by CMake
@@ -470,6 +476,12 @@ test_topic_BINARY_DIR:STATIC=/home/a/my_ros/build/test_topic
 
 //Value Computed by CMake
 test_topic_SOURCE_DIR:STATIC=/home/a/my_ros/src/test_topic
+
+//Value Computed by CMake
+test_turtle_vel_BINARY_DIR:STATIC=/home/a/my_ros/build/test_turtle_vel
+
+//Value Computed by CMake
+test_turtle_vel_SOURCE_DIR:STATIC=/home/a/my_ros/src/test_turtle_vel
 
 //Value Computed by CMake
 vel_pkg_BINARY_DIR:STATIC=/home/a/my_ros/build/vel_pkg
@@ -590,7 +602,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=16
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=18
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

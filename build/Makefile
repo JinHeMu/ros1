@@ -1299,6 +1299,19 @@ hello_pub_node/fast:
 .PHONY : hello_pub_node/fast
 
 #=============================================================================
+# Target rules for targets named cmdvel_node
+
+# Build rule for target.
+cmdvel_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cmdvel_node
+.PHONY : cmdvel_node
+
+# fast build rule for target.
+cmdvel_node/fast:
+	$(MAKE) -f test_turtle_vel/CMakeFiles/cmdvel_node.dir/build.make test_turtle_vel/CMakeFiles/cmdvel_node.dir/build
+.PHONY : cmdvel_node/fast
+
+#=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_eus
 
 # Build rule for target.
@@ -1502,6 +1515,7 @@ help:
 	@echo "... server_node"
 	@echo "... hello_sub_node"
 	@echo "... hello_pub_node"
+	@echo "... cmdvel_node"
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... sensor_msgs_generate_messages_nodejs"

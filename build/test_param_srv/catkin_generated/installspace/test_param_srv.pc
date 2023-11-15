@@ -1,0 +1,8 @@
+prefix=/home/a/my_ros/install
+
+Name: test_param_srv
+Description: Description of test_param_srv
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -2,4 +2,4 @@
 source_root_dir = '/home/a/my_ros/src'
 whitelisted_packages = ''.split(';') if '' != '' else []
 blacklisted_packages = ''.split(';') if '' != '' else []
-underlay_workspaces = '/opt/ros/melodic'.split(';') if '/opt/ros/melodic' != '' else []
+underlay_workspaces = '/home/a/my_ros/devel;/opt/ros/melodic'.split(';') if '/home/a/my_ros/devel;/opt/ros/melodic' != '' else []
