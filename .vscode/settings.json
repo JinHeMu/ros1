@@ -1,15 +1,10 @@
 {
     "python.autoComplete.extraPaths": [
+        "/home/a/my_ros/devel/lib/python2.7/dist-packages",
         "/opt/ros/melodic/lib/python2.7/dist-packages"
     ],
     "python.analysis.extraPaths": [
+        "/home/a/my_ros/devel/lib/python2.7/dist-packages",
         "/opt/ros/melodic/lib/python2.7/dist-packages"
-    ],
-    "files.associations": {
-        "*.tcc": "cpp",
-        "istream": "cpp",
-        "ostream": "cpp",
-        "sstream": "cpp",
-        "iomanip": "cpp"
-    }
+    ]
 }

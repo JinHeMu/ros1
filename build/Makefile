@@ -1299,6 +1299,19 @@ hello_pub_node/fast:
 .PHONY : hello_pub_node/fast
 
 #=============================================================================
+# Target rules for targets named param_node
+
+# Build rule for target.
+param_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 param_node
+.PHONY : param_node
+
+# fast build rule for target.
+param_node/fast:
+	$(MAKE) -f test_turtle_param/CMakeFiles/param_node.dir/build.make test_turtle_param/CMakeFiles/param_node.dir/build
+.PHONY : param_node/fast
+
+#=============================================================================
 # Target rules for targets named cmdvel_node
 
 # Build rule for target.
@@ -1546,6 +1559,19 @@ std_srvs_generate_messages_cpp/fast:
 .PHONY : std_srvs_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named srv_node
+
+# Build rule for target.
+srv_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 srv_node
+.PHONY : srv_node
+
+# fast build rule for target.
+srv_node/fast:
+	$(MAKE) -f test_turtle_srv/CMakeFiles/srv_node.dir/build.make test_turtle_srv/CMakeFiles/srv_node.dir/build
+.PHONY : srv_node/fast
+
+#=============================================================================
 # Target rules for targets named vel_node
 
 # Build rule for target.
@@ -1658,6 +1684,7 @@ help:
 	@echo "... server_node"
 	@echo "... hello_sub_node"
 	@echo "... hello_pub_node"
+	@echo "... param_node"
 	@echo "... cmdvel_node"
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_lisp"
@@ -1677,6 +1704,7 @@ help:
 	@echo "... pose_node"
 	@echo "... turtlesim_generate_messages_py"
 	@echo "... std_srvs_generate_messages_cpp"
+	@echo "... srv_node"
 	@echo "... vel_node"
 .PHONY : help
 

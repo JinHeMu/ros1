@@ -481,10 +481,22 @@ test_topic_BINARY_DIR:STATIC=/home/a/my_ros/build/test_topic
 test_topic_SOURCE_DIR:STATIC=/home/a/my_ros/src/test_topic
 
 //Value Computed by CMake
+test_turtle_param_BINARY_DIR:STATIC=/home/a/my_ros/build/test_turtle_param
+
+//Value Computed by CMake
+test_turtle_param_SOURCE_DIR:STATIC=/home/a/my_ros/src/test_turtle_param
+
+//Value Computed by CMake
 test_turtle_pose_BINARY_DIR:STATIC=/home/a/my_ros/build/test_turtle_pose
 
 //Value Computed by CMake
 test_turtle_pose_SOURCE_DIR:STATIC=/home/a/my_ros/src/test_turtle_pose
+
+//Value Computed by CMake
+test_turtle_srv_BINARY_DIR:STATIC=/home/a/my_ros/build/test_turtle_srv
+
+//Value Computed by CMake
+test_turtle_srv_SOURCE_DIR:STATIC=/home/a/my_ros/src/test_turtle_srv
 
 //Value Computed by CMake
 test_turtle_vel_BINARY_DIR:STATIC=/home/a/my_ros/build/test_turtle_vel
@@ -614,7 +626,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=19
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=21
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

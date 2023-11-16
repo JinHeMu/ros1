@@ -6,8 +6,17 @@
         "limitSymbolsToIncludedHeaders": false
       },
       "includePath": [
-        "/opt/ros/melodic/include/**",
         "/home/a/my_ros/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/a/my_ros/src/helloworld_pkg/include/**",
+        "/home/a/my_ros/src/test_msg/include/**",
+        "/home/a/my_ros/src/test_param_srv/include/**",
+        "/home/a/my_ros/src/test_srv/include/**",
+        "/home/a/my_ros/src/test_topic/include/**",
+        "/home/a/my_ros/src/test_turtle_param/include/**",
+        "/home/a/my_ros/src/test_turtle_pose/include/**",
+        "/home/a/my_ros/src/test_turtle_srv/include/**",
+        "/home/a/my_ros/src/test_turtle_vel/include/**",
         "/usr/include/**"
       ],
       "name": "ROS",

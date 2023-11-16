@@ -2197,3 +2197,357 @@ Copy
 最后启动乌龟位姿订阅节点；
 
 最终执行结果与演示结果类似。
+
+### 实操03_服务调用
+
+**需求描述:**编码实现向 turtlesim 发送请求，在乌龟显示节点的窗体指定位置生成一乌龟，这是一个服务请求操作。
+
+**结果演示:**
+
+![img](http://www.autolabor.com.cn/book/ROSTutorials/assets/02_%E6%A1%88%E4%BE%8B2_%E7%94%9F%E6%88%90%E5%B0%8F%E4%B9%8C%E9%BE%9F.PNG)
+
+**实现分析:**
+
+1. 首先，需要启动乌龟显示节点。
+2. 要通过ROS命令，来获取乌龟生成服务的服务名称以及服务消息类型。
+3. 编写服务请求节点，生成新的乌龟。
+
+**实现流程:**
+
+1. 通过ros命令获取服务与服务消息信息。
+2. 编码实现服务请求节点。
+3. 启动 roscore、turtlesim_node 、乌龟生成节点，生成新的乌龟。
+
+#### 1.服务名称与服务消息获取
+
+**获取话题:**/spawn
+
+```
+rosservice list
+Copy
+```
+
+**获取消息类型:**turtlesim/Spawn
+
+```
+rosservice type /spawn
+Copy
+```
+
+**获取消息格式:**
+
+```
+rossrv info turtlesim/Spawn
+Copy
+```
+
+**响应结果:**
+
+```
+float32 x
+float32 y
+float32 theta
+string name
+---
+string name
+Copy
+```
+
+##### 
+
+#### 2.服务客户端实现
+
+创建功能包需要依赖的功能包: roscpp rospy std_msgs turtlesim
+
+**实现方案A:**C++
+
+```cpp
+/*
+    生成一只小乌龟
+    准备工作:
+        1.服务话题 /spawn
+        2.服务消息类型 turtlesim/Spawn
+        3.运行前先启动 turtlesim_node 节点
+
+    实现流程:
+        1.包含头文件
+          需要包含 turtlesim 包下资源，注意在 package.xml 配置
+        2.初始化 ros 节点
+        3.创建 ros 句柄
+        4.创建 service 客户端
+        5.等待服务启动
+        6.发送请求
+        7.处理响应
+
+*/
+
+#include "ros/ros.h"
+#include "turtlesim/Spawn.h"
+
+int main(int argc, char *argv[])
+{
+    setlocale(LC_ALL,"");
+    // 2.初始化 ros 节点
+    ros::init(argc,argv,"set_turtle");
+    // 3.创建 ros 句柄
+    ros::NodeHandle nh;
+    // 4.创建 service 客户端
+    ros::ServiceClient client = nh.serviceClient<turtlesim::Spawn>("/spawn");
+    // 5.等待服务启动
+    // client.waitForExistence();
+    ros::service::waitForService("/spawn");
+    // 6.发送请求
+    turtlesim::Spawn spawn;
+    spawn.request.x = 1.0;
+    spawn.request.y = 1.0;
+    spawn.request.theta = 1.57;
+    spawn.request.name = "my_turtle";
+    bool flag = client.call(spawn);
+    // 7.处理响应结果
+    if (flag)
+    {
+        ROS_INFO("新的乌龟生成,名字:%s",spawn.response.name.c_str());
+    } else {
+        ROS_INFO("乌龟生成失败！！！");
+    }
+
+
+    return 0;
+}
+Copy
+```
+
+配置文件此处略
+
+**实现方案B:**Python
+
+```py
+#! /usr/bin/env python
+"""
+    生成一只小乌龟
+    准备工作:
+        1.服务话题 /spawn
+        2.服务消息类型 turtlesim/Spawn
+        3.运行前先启动 turtlesim_node 节点
+
+    实现流程:
+        1.导包
+          需要包含 turtlesim 包下资源，注意在 package.xml 配置
+        2.初始化 ros 节点
+        3.创建 service 客户端
+        4.等待服务启动
+        5.发送请求
+        6.处理响应
+
+"""
+
+import rospy
+from turtlesim.srv import Spawn,SpawnRequest,SpawnResponse
+
+if __name__ == "__main__":
+    # 2.初始化 ros 节点
+    rospy.init_node("set_turtle_p")
+    # 3.创建 service 客户端
+    client = rospy.ServiceProxy("/spawn",Spawn)
+    # 4.等待服务启动
+    client.wait_for_service()
+    # 5.发送请求
+    req = SpawnRequest()
+    req.x = 2.0
+    req.y = 2.0
+    req.theta = -1.57
+    req.name = "my_turtle_p"
+    try:
+        response = client.call(req)
+        # 6.处理响应
+        rospy.loginfo("乌龟创建成功!，叫:%s",response.name)
+    except expression as identifier:
+        rospy.loginfo("服务调用失败")
+Copy
+```
+
+权限设置以及配置文件此处略
+
+#### 3.运行
+
+首先，启动 roscore；
+
+然后启动乌龟显示节点；
+
+最后启动乌龟生成请求节点；
+
+最终执行结果与演示结果类似。
+
+### 实操04_参数设置
+
+**需求描述:** 修改turtlesim乌龟显示节点窗体的背景色，已知背景色是通过参数服务器的方式以 rgb 方式设置的。
+
+**结果演示:**
+
+![img](http://www.autolabor.com.cn/book/ROSTutorials/assets/03_%E6%A1%88%E4%BE%8B3_%E6%94%B9%E5%8F%98%E8%83%8C%E6%99%AF%E8%89%B2.PNG)
+
+**实现分析:**
+
+1. 首先，需要启动乌龟显示节点。
+2. 要通过ROS命令，来获取参数服务器中设置背景色的参数。
+3. 编写参数设置节点，修改参数服务器中的参数值。
+
+**实现流程:**
+
+1. 通过ros命令获取参数。
+2. 编码实现服参数设置节点。
+3. 启动 roscore、turtlesim_node 与参数设置节点，查看运行结果。
+
+#### 1.参数名获取
+
+**获取参数列表:**
+
+```
+rosparam list
+Copy
+```
+
+**响应结果:**
+
+```
+/turtlesim/background_b
+/turtlesim/background_g
+/turtlesim/background_r
+Copy
+```
+
+#### 2.参数修改
+
+**实现方案A:**C++
+
+```cpp
+/*
+    注意命名空间的使用。
+
+*/
+#include "ros/ros.h"
+
+
+int main(int argc, char *argv[])
+{
+    ros::init(argc,argv,"haha");
+
+    ros::NodeHandle nh("turtlesim");
+    //ros::NodeHandle nh;
+
+    // ros::param::set("/turtlesim/background_r",0);
+    // ros::param::set("/turtlesim/background_g",0);
+    // ros::param::set("/turtlesim/background_b",0);
+
+    nh.setParam("background_r",0);
+    nh.setParam("background_g",0);
+    nh.setParam("background_b",0);
+
+
+    return 0;
+}
+Copy
+```
+
+配置文件此处略
+
+**实现方案B:**Python
+
+```py
+#! /usr/bin/env python
+
+import rospy
+
+if __name__ == "__main__":
+    rospy.init_node("hehe")
+    # rospy.set_param("/turtlesim/background_r",255)
+    # rospy.set_param("/turtlesim/background_g",255)
+    # rospy.set_param("/turtlesim/background_b",255)
+    rospy.set_param("background_r",255)
+    rospy.set_param("background_g",255)
+    rospy.set_param("background_b",255)  # 调用时，需要传入 __ns:=xxx
+Copy
+```
+
+权限设置以及配置文件此处略
+
+#### 3.运行
+
+首先，启动 roscore；
+
+然后启动背景色设置节点；
+
+最后启动乌龟显示节点；
+
+最终执行结果与演示结果类似。
+
+PS: 注意节点启动顺序，如果先启动乌龟显示节点，后启动背景色设置节点，那么颜色设置不会生效。
+
+#### 4.其他设置方式
+
+**方式1:修改小乌龟节点的背景色(命令行实现)**
+
+```
+rosparam set /turtlesim/background_b 自定义数值
+Copy
+rosparam set /turtlesim/background_g 自定义数值
+Copy
+rosparam set /turtlesim/background_r 自定义数值
+Copy
+```
+
+修改相关参数后，重启 turtlesim_node 节点，背景色就会发生改变了
+
+**方式2:启动节点时，直接设置参数**
+
+```
+rosrun turtlesim turtlesim_node _background_r:=100 _background_g=0 _background_b=0
+Copy
+```
+
+**方式3:通过launch文件传参**
+
+```xml
+<launch>
+    <node pkg="turtlesim" type="turtlesim_node" name="set_bg" output="screen">
+        <!-- launch 传参策略1 -->
+        <!-- <param name="background_b" value="0" type="int" />
+        <param name="background_g" value="0" type="int" />
+        <param name="background_r" value="0" type="int" /> -->
+
+        <!-- launch 传参策略2 -->
+        <rosparam command="load" file="$(find demo03_test_parameter)/cfg/color.yaml" />
+    </node>
+
+</
+```
+
+## 通信机制比较
+
+三种通信机制中，参数服务器是一种数据共享机制，可以在不同的节点之间共享数据，话题通信与服务通信是在不同的节点之间传递数据的，三者是ROS中最基础也是应用最为广泛的通信机制。
+
+这其中，话题通信和服务通信有一定的相似性也有本质上的差异，在此将二者做一下简单比较:
+
+二者的实现流程是比较相似的，都是涉及到四个要素:
+
+- 要素1: 消息的发布方/客户端(Publisher/Client)
+- 要素2: 消息的订阅方/服务端(Subscriber/Server)
+- 要素3: 话题名称(Topic/Service)
+- 要素4: 数据载体(msg/srv)
+
+可以概括为: 两个节点通过话题关联到一起，并使用某种类型的数据载体实现数据传输。
+
+二者的实现也是有本质差异的，具体比较如下:
+
+|          | Topic(话题)                           | Service(服务)                                |
+| :------- | :------------------------------------ | :------------------------------------------- |
+| 通信模式 | 发布/订阅                             | 请求/响应                                    |
+| 同步性   | 异步                                  | 同步                                         |
+| 底层协议 | ROSTCP/ROSUDP                         | ROSTCP/ROSUDP                                |
+| 缓冲区   | 有                                    | 无                                           |
+| 时时性   | 弱                                    | 强                                           |
+| 节点关系 | 多对多                                | 一对多(一个 Server)                          |
+| 通信数据 | msg                                   | srv                                          |
+| 使用场景 | 连续高频的数据发布与接收:雷达、里程计 | 偶尔调用或执行某一项特定功能：拍照、语音识别 |
+
+不同通信机制有一定的互补性，都有各自适应的应用场景。尤其是话题与服务通信，需要结合具体的应用场景与二者的差异，选择合适的通信机制。

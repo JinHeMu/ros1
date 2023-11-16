@@ -1,2 +1,2 @@
-atr_pkg:helloworld_pkg:imu_pkg:lidar_pkg:map_pkg:qq_msgs:slam_pkg:ssr_pkg:test_msg:test_param_srv:test_srv:test_topic:test_turtle_pose:test_turtle_vel:vel_pkg
+atr_pkg:helloworld_pkg:imu_pkg:lidar_pkg:map_pkg:qq_msgs:slam_pkg:ssr_pkg:test_msg:test_param_srv:test_srv:test_topic:test_turtle_param:test_turtle_pose:test_turtle_srv:test_turtle_vel:vel_pkg
 -DCATKIN_DEVEL_PREFIX=/home/a/my_ros/devel -DCMAKE_INSTALL_PREFIX=/home/a/my_ros/install -G Unix Makefiles
