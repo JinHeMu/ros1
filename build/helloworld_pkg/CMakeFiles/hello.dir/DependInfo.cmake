@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/a/my_ros/src/helloworld_pkg/src/helloworld_node.cpp" "/home/a/my_ros/build/helloworld_pkg/CMakeFiles/helloworld_node.dir/src/helloworld_node.cpp.o"
+  "/home/a/my_ros/src/helloworld_pkg/src/hello.cpp" "/home/a/my_ros/build/helloworld_pkg/CMakeFiles/hello.dir/src/hello.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

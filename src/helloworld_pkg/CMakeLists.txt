@@ -116,7 +116,7 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+include
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -214,3 +214,14 @@ target_link_libraries(
   helloworld_node
   ${catkin_LIBRARIES}
 )
+
+add_executable(
+  hello
+  src/hello.cpp
+)
+
+target_link_libraries(
+  hello
+  ${catkin_LIBRARIES}
+)
+
