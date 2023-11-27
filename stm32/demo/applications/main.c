@@ -86,8 +86,9 @@ int main(void)
 {
     MX_GPIO_Init();
 
-    ADC1_Thread_Init();
+    //ADC1_Thread_Init();
     OLED_Thread_Init();
+    Encoder_TIM2_Init();
 
     while (1)
     {

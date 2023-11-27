@@ -31,9 +31,10 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "HARDWARE/ADC/adc.h"
 #include "rtthread.h"
+#include "HARDWARE/ADC/adc.h"
 #include "HARDWARE/OLED/oled.h"
+#include "HARDWARE/ENCODER/encoder.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -59,6 +60,10 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define USART3_TX_Pin GPIO_PIN_8
+#define USART3_TX_GPIO_Port GPIOD
+#define USART3_RX_Pin GPIO_PIN_9
+#define USART3_RX_GPIO_Port GPIOD
 #define OLED_RS_Pin GPIO_PIN_11
 #define OLED_RS_GPIO_Port GPIOD
 #define OLED_RST_Pin GPIO_PIN_12

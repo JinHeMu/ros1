@@ -302,8 +302,10 @@ void oled_entry(void)
 {
     while(1)
     {
-        OLED_ShowString(0,5,"+1:");//显示字符串
+
         OLED_ShowNumber(30,0,ADC_Value*1000,5,16);//显示数字
+        OLED_ShowNumber(80,0,Read_Encoder(2),5,16);//显示数字
+
         rt_thread_mdelay(100);
         OLED_Refresh_Gram();
     }
