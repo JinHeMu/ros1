@@ -285,6 +285,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named hello
+
+# Build rule for target.
+hello: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hello
+.PHONY : hello
+
+# fast build rule for target.
+hello/fast:
+	$(MAKE) -f helloworld_pkg/CMakeFiles/hello.dir/build.make helloworld_pkg/CMakeFiles/hello.dir/build
+.PHONY : hello/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_py
 
 # Build rule for target.
@@ -1606,6 +1619,7 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... hello"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_cpp"

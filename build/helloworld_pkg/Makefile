@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+helloworld_pkg/CMakeFiles/hello.dir/rule:
+	cd /home/a/my_ros/build && $(MAKE) -f CMakeFiles/Makefile2 helloworld_pkg/CMakeFiles/hello.dir/rule
+.PHONY : helloworld_pkg/CMakeFiles/hello.dir/rule
+
+# Convenience name for target.
+hello: helloworld_pkg/CMakeFiles/hello.dir/rule
+
+.PHONY : hello
+
+# fast build rule for target.
+hello/fast:
+	cd /home/a/my_ros/build && $(MAKE) -f helloworld_pkg/CMakeFiles/hello.dir/build.make helloworld_pkg/CMakeFiles/hello.dir/build
+.PHONY : hello/fast
+
+# Convenience name for target.
 helloworld_pkg/CMakeFiles/roscpp_generate_messages_py.dir/rule:
 	cd /home/a/my_ros/build && $(MAKE) -f CMakeFiles/Makefile2 helloworld_pkg/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : helloworld_pkg/CMakeFiles/roscpp_generate_messages_py.dir/rule
@@ -407,6 +422,33 @@ helloworld_node/fast:
 	cd /home/a/my_ros/build && $(MAKE) -f helloworld_pkg/CMakeFiles/helloworld_node.dir/build.make helloworld_pkg/CMakeFiles/helloworld_node.dir/build
 .PHONY : helloworld_node/fast
 
+src/hello.o: src/hello.cpp.o
+
+.PHONY : src/hello.o
+
+# target to build an object file
+src/hello.cpp.o:
+	cd /home/a/my_ros/build && $(MAKE) -f helloworld_pkg/CMakeFiles/hello.dir/build.make helloworld_pkg/CMakeFiles/hello.dir/src/hello.cpp.o
+.PHONY : src/hello.cpp.o
+
+src/hello.i: src/hello.cpp.i
+
+.PHONY : src/hello.i
+
+# target to preprocess a source file
+src/hello.cpp.i:
+	cd /home/a/my_ros/build && $(MAKE) -f helloworld_pkg/CMakeFiles/hello.dir/build.make helloworld_pkg/CMakeFiles/hello.dir/src/hello.cpp.i
+.PHONY : src/hello.cpp.i
+
+src/hello.s: src/hello.cpp.s
+
+.PHONY : src/hello.s
+
+# target to generate assembly for a file
+src/hello.cpp.s:
+	cd /home/a/my_ros/build && $(MAKE) -f helloworld_pkg/CMakeFiles/hello.dir/build.make helloworld_pkg/CMakeFiles/hello.dir/src/hello.cpp.s
+.PHONY : src/hello.cpp.s
+
 src/helloworld_node.o: src/helloworld_node.cpp.o
 
 .PHONY : src/helloworld_node.o
@@ -444,6 +486,7 @@ help:
 	@echo "... install/local"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... hello"
 	@echo "... list_install_components"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... roscpp_generate_messages_eus"
@@ -463,6 +506,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... helloworld_node"
+	@echo "... src/hello.o"
+	@echo "... src/hello.i"
+	@echo "... src/hello.s"
 	@echo "... src/helloworld_node.o"
 	@echo "... src/helloworld_node.i"
 	@echo "... src/helloworld_node.s"
