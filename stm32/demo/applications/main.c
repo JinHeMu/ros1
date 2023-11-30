@@ -17,7 +17,6 @@
 #include "main.h"
 
 
-
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
@@ -68,8 +67,11 @@ static void MX_GPIO_Init(void)
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
+    static float speed;
     if(GPIO_Pin == KEY_Pin){
-        HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+        speed += 0.1;
+        Mec_Car.SpeedY = speed;
+        rt_kprintf("pwm:%d\n", speed);
     }
 }
 
@@ -86,13 +88,21 @@ int main(void)
 {
     MX_GPIO_Init();
 
-    //ADC1_Thread_Init();
+    ADC1_Thread_Init();
     OLED_Thread_Init();
-    Encoder_TIM2_Init();
+
+    Encoder_Init();
+
+    Motor_Init();
+
+    Timer1_Init();
+
 
     while (1)
     {
         HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+
+
 
         rt_thread_mdelay(1000);
 

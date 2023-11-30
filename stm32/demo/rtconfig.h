@@ -84,7 +84,11 @@
 #define RT_USING_SERIAL
 #define RT_USING_SERIAL_V1
 #define RT_SERIAL_RB_BUFSZ 64
+#define RT_USING_I2C
+#define RT_USING_I2C_BITOPS
 #define RT_USING_PIN
+#define RT_USING_SENSOR
+#define RT_USING_SENSOR_CMD
 
 /* Using USB */
 
@@ -202,6 +206,10 @@
 
 /* sensors drivers */
 
+#define PKG_USING_MPU6XXX
+#define PKG_USING_MPU6XXX_V111
+#define PKG_USING_MPU6XXX_ACCE
+#define PKG_USING_MPU6XXX_GYRO
 /* end of sensors drivers */
 
 /* touch drivers */

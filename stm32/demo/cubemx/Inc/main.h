@@ -32,13 +32,16 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "rtthread.h"
-#include "HARDWARE/ADC/adc.h"
-#include "HARDWARE/OLED/oled.h"
-#include "HARDWARE/ENCODER/encoder.h"
+#include <code/adc.h>
+#include <code/OLED/oled.h>
+#include <code/encoder.h>
+#include <code/motor.h>
+#include <code/timer_pit.h>
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
+
 
 /* USER CODE END ET */
 
@@ -51,6 +54,8 @@ extern "C" {
 /* USER CODE BEGIN EM */
 
 /* USER CODE END EM */
+
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
@@ -77,6 +82,17 @@ void Error_Handler(void);
 #define KEY_Pin GPIO_PIN_0
 #define KEY_GPIO_Port GPIOE
 #define KEY_EXTI_IRQn EXTI0_IRQn
+
+
+#define PI 3.1415f  //PI //圆周率
+//编码器倍频数，取决于编码器初始化设置
+#define EncoderRound  800
+//编码器数据读取频率
+#define CONTROL_FREQUENCY 100
+//麦轮直径
+#define Mecanum_75  0.075f
+#define MEC_wheelspacing         0.0930 //修正2021.03.30
+#define MEC_axlespacing           0.085
 
 /* USER CODE BEGIN Private defines */
 
