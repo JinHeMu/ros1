@@ -3,4 +3,4 @@ clean2:
 	-$(RM) $(OBJS) *.elf
 	-@echo ' '
     
-*.elf: $(wildcard ../linkscripts/STM32F407VE/link.lds)
+*.elf: $(wildcard ..C:/Users/49075/Desktop/github-repository/ROS1/stm32/demo/linkscripts/STM32F407VE/link.lds)
