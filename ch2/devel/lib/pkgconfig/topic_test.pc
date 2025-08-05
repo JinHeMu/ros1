@@ -1,0 +1,8 @@
+prefix=/home/a/ros1/ch2/devel
+
+Name: topic_test
+Description: Description of topic_test
+Version: 0.0.0
+Cflags: -I/home/a/ros1/ch2/devel/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs message_runtime

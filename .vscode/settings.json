@@ -1,10 +1,3 @@
 {
-    "python.autoComplete.extraPaths": [
-        "/home/a/my_ros/devel/lib/python2.7/dist-packages",
-        "/opt/ros/melodic/lib/python2.7/dist-packages"
-    ],
-    "python.analysis.extraPaths": [
-        "/home/a/my_ros/devel/lib/python2.7/dist-packages",
-        "/opt/ros/melodic/lib/python2.7/dist-packages"
-    ]
+    "cmake.sourceDirectory": "/home/a/ros1/ch1/src/test"
 }
