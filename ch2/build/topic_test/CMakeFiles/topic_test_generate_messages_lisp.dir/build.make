@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/a/ros1/ch2/build
 include topic_test/CMakeFiles/topic_test_generate_messages_lisp.dir/progress.make
 
 topic_test/CMakeFiles/topic_test_generate_messages_lisp: /home/a/ros1/ch2/devel/share/common-lisp/ros/topic_test/msg/person.lisp
+topic_test/CMakeFiles/topic_test_generate_messages_lisp: /home/a/ros1/ch2/devel/share/common-lisp/ros/topic_test/srv/add_int.lisp
 
 
 /home/a/ros1/ch2/devel/share/common-lisp/ros/topic_test/msg/person.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
@@ -61,8 +62,14 @@ topic_test/CMakeFiles/topic_test_generate_messages_lisp: /home/a/ros1/ch2/devel/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/a/ros1/ch2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from topic_test/person.msg"
 	cd /home/a/ros1/ch2/build/topic_test && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/a/ros1/ch2/src/topic_test/msg/person.msg -Itopic_test:/home/a/ros1/ch2/src/topic_test/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p topic_test -o /home/a/ros1/ch2/devel/share/common-lisp/ros/topic_test/msg
 
+/home/a/ros1/ch2/devel/share/common-lisp/ros/topic_test/srv/add_int.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/a/ros1/ch2/devel/share/common-lisp/ros/topic_test/srv/add_int.lisp: /home/a/ros1/ch2/src/topic_test/srv/add_int.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/a/ros1/ch2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from topic_test/add_int.srv"
+	cd /home/a/ros1/ch2/build/topic_test && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/a/ros1/ch2/src/topic_test/srv/add_int.srv -Itopic_test:/home/a/ros1/ch2/src/topic_test/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p topic_test -o /home/a/ros1/ch2/devel/share/common-lisp/ros/topic_test/srv
+
 topic_test_generate_messages_lisp: topic_test/CMakeFiles/topic_test_generate_messages_lisp
 topic_test_generate_messages_lisp: /home/a/ros1/ch2/devel/share/common-lisp/ros/topic_test/msg/person.lisp
+topic_test_generate_messages_lisp: /home/a/ros1/ch2/devel/share/common-lisp/ros/topic_test/srv/add_int.lisp
 topic_test_generate_messages_lisp: topic_test/CMakeFiles/topic_test_generate_messages_lisp.dir/build.make
 
 .PHONY : topic_test_generate_messages_lisp

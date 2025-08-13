@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "topic_test: 1 messages, 0 services")
+message(STATUS "topic_test: 1 messages, 1 services")
 
 set(MSG_I_FLAGS "-Itopic_test:/home/a/ros1/ch2/src/topic_test/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
@@ -22,6 +22,11 @@ add_custom_target(_topic_test_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "topic_test" "/home/a/ros1/ch2/src/topic_test/msg/person.msg" ""
 )
 
+get_filename_component(_filename "/home/a/ros1/ch2/src/topic_test/srv/add_int.srv" NAME_WE)
+add_custom_target(_topic_test_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "topic_test" "/home/a/ros1/ch2/src/topic_test/srv/add_int.srv" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -36,6 +41,12 @@ _generate_msg_cpp(topic_test
 )
 
 ### Generating Services
+_generate_srv_cpp(topic_test
+  "/home/a/ros1/ch2/src/topic_test/srv/add_int.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/topic_test
+)
 
 ### Generating Module File
 _generate_module_cpp(topic_test
@@ -50,6 +61,8 @@ add_dependencies(topic_test_generate_messages topic_test_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/a/ros1/ch2/src/topic_test/msg/person.msg" NAME_WE)
+add_dependencies(topic_test_generate_messages_cpp _topic_test_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/a/ros1/ch2/src/topic_test/srv/add_int.srv" NAME_WE)
 add_dependencies(topic_test_generate_messages_cpp _topic_test_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -69,6 +82,12 @@ _generate_msg_eus(topic_test
 )
 
 ### Generating Services
+_generate_srv_eus(topic_test
+  "/home/a/ros1/ch2/src/topic_test/srv/add_int.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/topic_test
+)
 
 ### Generating Module File
 _generate_module_eus(topic_test
@@ -83,6 +102,8 @@ add_dependencies(topic_test_generate_messages topic_test_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/a/ros1/ch2/src/topic_test/msg/person.msg" NAME_WE)
+add_dependencies(topic_test_generate_messages_eus _topic_test_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/a/ros1/ch2/src/topic_test/srv/add_int.srv" NAME_WE)
 add_dependencies(topic_test_generate_messages_eus _topic_test_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -102,6 +123,12 @@ _generate_msg_lisp(topic_test
 )
 
 ### Generating Services
+_generate_srv_lisp(topic_test
+  "/home/a/ros1/ch2/src/topic_test/srv/add_int.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/topic_test
+)
 
 ### Generating Module File
 _generate_module_lisp(topic_test
@@ -116,6 +143,8 @@ add_dependencies(topic_test_generate_messages topic_test_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/a/ros1/ch2/src/topic_test/msg/person.msg" NAME_WE)
+add_dependencies(topic_test_generate_messages_lisp _topic_test_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/a/ros1/ch2/src/topic_test/srv/add_int.srv" NAME_WE)
 add_dependencies(topic_test_generate_messages_lisp _topic_test_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -135,6 +164,12 @@ _generate_msg_nodejs(topic_test
 )
 
 ### Generating Services
+_generate_srv_nodejs(topic_test
+  "/home/a/ros1/ch2/src/topic_test/srv/add_int.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/topic_test
+)
 
 ### Generating Module File
 _generate_module_nodejs(topic_test
@@ -149,6 +184,8 @@ add_dependencies(topic_test_generate_messages topic_test_generate_messages_nodej
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/a/ros1/ch2/src/topic_test/msg/person.msg" NAME_WE)
+add_dependencies(topic_test_generate_messages_nodejs _topic_test_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/a/ros1/ch2/src/topic_test/srv/add_int.srv" NAME_WE)
 add_dependencies(topic_test_generate_messages_nodejs _topic_test_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -168,6 +205,12 @@ _generate_msg_py(topic_test
 )
 
 ### Generating Services
+_generate_srv_py(topic_test
+  "/home/a/ros1/ch2/src/topic_test/srv/add_int.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/topic_test
+)
 
 ### Generating Module File
 _generate_module_py(topic_test
@@ -182,6 +225,8 @@ add_dependencies(topic_test_generate_messages topic_test_generate_messages_py)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/a/ros1/ch2/src/topic_test/msg/person.msg" NAME_WE)
+add_dependencies(topic_test_generate_messages_py _topic_test_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/a/ros1/ch2/src/topic_test/srv/add_int.srv" NAME_WE)
 add_dependencies(topic_test_generate_messages_py _topic_test_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

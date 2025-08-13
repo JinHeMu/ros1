@@ -54,7 +54,9 @@ CMAKE_BINARY_DIR = /home/a/ros1/ch2/build
 include topic_test/CMakeFiles/topic_test_generate_messages_py.dir/progress.make
 
 topic_test/CMakeFiles/topic_test_generate_messages_py: /home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/msg/_person.py
+topic_test/CMakeFiles/topic_test_generate_messages_py: /home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/srv/_add_int.py
 topic_test/CMakeFiles/topic_test_generate_messages_py: /home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/msg/__init__.py
+topic_test/CMakeFiles/topic_test_generate_messages_py: /home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/srv/__init__.py
 
 
 /home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/msg/_person.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
@@ -62,14 +64,28 @@ topic_test/CMakeFiles/topic_test_generate_messages_py: /home/a/ros1/ch2/devel/li
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/a/ros1/ch2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG topic_test/person"
 	cd /home/a/ros1/ch2/build/topic_test && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/a/ros1/ch2/src/topic_test/msg/person.msg -Itopic_test:/home/a/ros1/ch2/src/topic_test/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p topic_test -o /home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/msg
 
+/home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/srv/_add_int.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/srv/_add_int.py: /home/a/ros1/ch2/src/topic_test/srv/add_int.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/a/ros1/ch2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV topic_test/add_int"
+	cd /home/a/ros1/ch2/build/topic_test && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/a/ros1/ch2/src/topic_test/srv/add_int.srv -Itopic_test:/home/a/ros1/ch2/src/topic_test/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p topic_test -o /home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/srv
+
 /home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/msg/__init__.py: /home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/msg/_person.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/a/ros1/ch2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for topic_test"
+/home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/msg/__init__.py: /home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/srv/_add_int.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/a/ros1/ch2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for topic_test"
 	cd /home/a/ros1/ch2/build/topic_test && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/msg --initpy
+
+/home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/srv/__init__.py: /home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/msg/_person.py
+/home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/srv/__init__.py: /home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/srv/_add_int.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/a/ros1/ch2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python srv __init__.py for topic_test"
+	cd /home/a/ros1/ch2/build/topic_test && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/srv --initpy
 
 topic_test_generate_messages_py: topic_test/CMakeFiles/topic_test_generate_messages_py
 topic_test_generate_messages_py: /home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/msg/_person.py
+topic_test_generate_messages_py: /home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/srv/_add_int.py
 topic_test_generate_messages_py: /home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/msg/__init__.py
+topic_test_generate_messages_py: /home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/srv/__init__.py
 topic_test_generate_messages_py: topic_test/CMakeFiles/topic_test_generate_messages_py.dir/build.make
 
 .PHONY : topic_test_generate_messages_py

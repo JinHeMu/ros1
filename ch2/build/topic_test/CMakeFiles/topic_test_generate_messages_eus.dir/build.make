@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/a/ros1/ch2/build
 include topic_test/CMakeFiles/topic_test_generate_messages_eus.dir/progress.make
 
 topic_test/CMakeFiles/topic_test_generate_messages_eus: /home/a/ros1/ch2/devel/share/roseus/ros/topic_test/msg/person.l
+topic_test/CMakeFiles/topic_test_generate_messages_eus: /home/a/ros1/ch2/devel/share/roseus/ros/topic_test/srv/add_int.l
 topic_test/CMakeFiles/topic_test_generate_messages_eus: /home/a/ros1/ch2/devel/share/roseus/ros/topic_test/manifest.l
 
 
@@ -62,12 +63,18 @@ topic_test/CMakeFiles/topic_test_generate_messages_eus: /home/a/ros1/ch2/devel/s
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/a/ros1/ch2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from topic_test/person.msg"
 	cd /home/a/ros1/ch2/build/topic_test && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/a/ros1/ch2/src/topic_test/msg/person.msg -Itopic_test:/home/a/ros1/ch2/src/topic_test/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p topic_test -o /home/a/ros1/ch2/devel/share/roseus/ros/topic_test/msg
 
+/home/a/ros1/ch2/devel/share/roseus/ros/topic_test/srv/add_int.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/a/ros1/ch2/devel/share/roseus/ros/topic_test/srv/add_int.l: /home/a/ros1/ch2/src/topic_test/srv/add_int.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/a/ros1/ch2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from topic_test/add_int.srv"
+	cd /home/a/ros1/ch2/build/topic_test && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/a/ros1/ch2/src/topic_test/srv/add_int.srv -Itopic_test:/home/a/ros1/ch2/src/topic_test/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p topic_test -o /home/a/ros1/ch2/devel/share/roseus/ros/topic_test/srv
+
 /home/a/ros1/ch2/devel/share/roseus/ros/topic_test/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/a/ros1/ch2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp manifest code for topic_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/a/ros1/ch2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp manifest code for topic_test"
 	cd /home/a/ros1/ch2/build/topic_test && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/a/ros1/ch2/devel/share/roseus/ros/topic_test topic_test std_msgs
 
 topic_test_generate_messages_eus: topic_test/CMakeFiles/topic_test_generate_messages_eus
 topic_test_generate_messages_eus: /home/a/ros1/ch2/devel/share/roseus/ros/topic_test/msg/person.l
+topic_test_generate_messages_eus: /home/a/ros1/ch2/devel/share/roseus/ros/topic_test/srv/add_int.l
 topic_test_generate_messages_eus: /home/a/ros1/ch2/devel/share/roseus/ros/topic_test/manifest.l
 topic_test_generate_messages_eus: topic_test/CMakeFiles/topic_test_generate_messages_eus.dir/build.make
 

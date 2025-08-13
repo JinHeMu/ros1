@@ -1,0 +1,2 @@
+lidar_pkg:vel_pkg:wpr_simulation
+-DCATKIN_DEVEL_PREFIX=/home/a/ros1/ch3/devel -DCMAKE_INSTALL_PREFIX=/home/a/ros1/ch3/install -G Unix Makefiles

@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "/home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/msg/__init__.py"
   "/home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/msg/_person.py"
+  "/home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/srv/__init__.py"
+  "/home/a/ros1/ch2/devel/lib/python3/dist-packages/topic_test/srv/_add_int.py"
   "CMakeFiles/topic_test_generate_messages_py"
 )
 

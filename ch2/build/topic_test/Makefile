@@ -56,18 +56,6 @@ CMAKE_BINARY_DIR = /home/a/ros1/ch2/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -79,17 +67,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -135,6 +123,18 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /home/a/ros1/ch2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/a/ros1/ch2/build/CMakeFiles /home/a/ros1/ch2/build/topic_test/CMakeFiles/progress.marks
@@ -168,6 +168,66 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+topic_test/CMakeFiles/test_srv_ser.dir/rule:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f CMakeFiles/Makefile2 topic_test/CMakeFiles/test_srv_ser.dir/rule
+.PHONY : topic_test/CMakeFiles/test_srv_ser.dir/rule
+
+# Convenience name for target.
+test_srv_ser: topic_test/CMakeFiles/test_srv_ser.dir/rule
+
+.PHONY : test_srv_ser
+
+# fast build rule for target.
+test_srv_ser/fast:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/test_srv_ser.dir/build.make topic_test/CMakeFiles/test_srv_ser.dir/build
+.PHONY : test_srv_ser/fast
+
+# Convenience name for target.
+topic_test/CMakeFiles/test_msg_sub.dir/rule:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f CMakeFiles/Makefile2 topic_test/CMakeFiles/test_msg_sub.dir/rule
+.PHONY : topic_test/CMakeFiles/test_msg_sub.dir/rule
+
+# Convenience name for target.
+test_msg_sub: topic_test/CMakeFiles/test_msg_sub.dir/rule
+
+.PHONY : test_msg_sub
+
+# fast build rule for target.
+test_msg_sub/fast:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/test_msg_sub.dir/build.make topic_test/CMakeFiles/test_msg_sub.dir/build
+.PHONY : test_msg_sub/fast
+
+# Convenience name for target.
+topic_test/CMakeFiles/test_msg_pub.dir/rule:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f CMakeFiles/Makefile2 topic_test/CMakeFiles/test_msg_pub.dir/rule
+.PHONY : topic_test/CMakeFiles/test_msg_pub.dir/rule
+
+# Convenience name for target.
+test_msg_pub: topic_test/CMakeFiles/test_msg_pub.dir/rule
+
+.PHONY : test_msg_pub
+
+# fast build rule for target.
+test_msg_pub/fast:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/test_msg_pub.dir/build.make topic_test/CMakeFiles/test_msg_pub.dir/build
+.PHONY : test_msg_pub/fast
+
+# Convenience name for target.
+topic_test/CMakeFiles/test_sub.dir/rule:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f CMakeFiles/Makefile2 topic_test/CMakeFiles/test_sub.dir/rule
+.PHONY : topic_test/CMakeFiles/test_sub.dir/rule
+
+# Convenience name for target.
+test_sub: topic_test/CMakeFiles/test_sub.dir/rule
+
+.PHONY : test_sub
+
+# fast build rule for target.
+test_sub/fast:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/test_sub.dir/build.make topic_test/CMakeFiles/test_sub.dir/build
+.PHONY : test_sub/fast
+
+# Convenience name for target.
 topic_test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
 	cd /home/a/ros1/ch2/build && $(MAKE) -f CMakeFiles/Makefile2 topic_test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 .PHONY : topic_test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
@@ -181,21 +241,6 @@ rosgraph_msgs_generate_messages_py: topic_test/CMakeFiles/rosgraph_msgs_generate
 rosgraph_msgs_generate_messages_py/fast:
 	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make topic_test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-topic_test/CMakeFiles/topic_test_generate_messages.dir/rule:
-	cd /home/a/ros1/ch2/build && $(MAKE) -f CMakeFiles/Makefile2 topic_test/CMakeFiles/topic_test_generate_messages.dir/rule
-.PHONY : topic_test/CMakeFiles/topic_test_generate_messages.dir/rule
-
-# Convenience name for target.
-topic_test_generate_messages: topic_test/CMakeFiles/topic_test_generate_messages.dir/rule
-
-.PHONY : topic_test_generate_messages
-
-# fast build rule for target.
-topic_test_generate_messages/fast:
-	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/topic_test_generate_messages.dir/build.make topic_test/CMakeFiles/topic_test_generate_messages.dir/build
-.PHONY : topic_test_generate_messages/fast
 
 # Convenience name for target.
 topic_test/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
@@ -331,21 +376,6 @@ topic_test_generate_messages_lisp: topic_test/CMakeFiles/topic_test_generate_mes
 topic_test_generate_messages_lisp/fast:
 	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/topic_test_generate_messages_lisp.dir/build.make topic_test/CMakeFiles/topic_test_generate_messages_lisp.dir/build
 .PHONY : topic_test_generate_messages_lisp/fast
-
-# Convenience name for target.
-topic_test/CMakeFiles/test_sub.dir/rule:
-	cd /home/a/ros1/ch2/build && $(MAKE) -f CMakeFiles/Makefile2 topic_test/CMakeFiles/test_sub.dir/rule
-.PHONY : topic_test/CMakeFiles/test_sub.dir/rule
-
-# Convenience name for target.
-test_sub: topic_test/CMakeFiles/test_sub.dir/rule
-
-.PHONY : test_sub
-
-# fast build rule for target.
-test_sub/fast:
-	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/test_sub.dir/build.make topic_test/CMakeFiles/test_sub.dir/build
-.PHONY : test_sub/fast
 
 # Convenience name for target.
 topic_test/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
@@ -498,6 +528,36 @@ _topic_test_generate_messages_check_deps_person/fast:
 .PHONY : _topic_test_generate_messages_check_deps_person/fast
 
 # Convenience name for target.
+topic_test/CMakeFiles/topic_test_generate_messages.dir/rule:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f CMakeFiles/Makefile2 topic_test/CMakeFiles/topic_test_generate_messages.dir/rule
+.PHONY : topic_test/CMakeFiles/topic_test_generate_messages.dir/rule
+
+# Convenience name for target.
+topic_test_generate_messages: topic_test/CMakeFiles/topic_test_generate_messages.dir/rule
+
+.PHONY : topic_test_generate_messages
+
+# fast build rule for target.
+topic_test_generate_messages/fast:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/topic_test_generate_messages.dir/build.make topic_test/CMakeFiles/topic_test_generate_messages.dir/build
+.PHONY : topic_test_generate_messages/fast
+
+# Convenience name for target.
+topic_test/CMakeFiles/_topic_test_generate_messages_check_deps_add_int.dir/rule:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f CMakeFiles/Makefile2 topic_test/CMakeFiles/_topic_test_generate_messages_check_deps_add_int.dir/rule
+.PHONY : topic_test/CMakeFiles/_topic_test_generate_messages_check_deps_add_int.dir/rule
+
+# Convenience name for target.
+_topic_test_generate_messages_check_deps_add_int: topic_test/CMakeFiles/_topic_test_generate_messages_check_deps_add_int.dir/rule
+
+.PHONY : _topic_test_generate_messages_check_deps_add_int
+
+# fast build rule for target.
+_topic_test_generate_messages_check_deps_add_int/fast:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/_topic_test_generate_messages_check_deps_add_int.dir/build.make topic_test/CMakeFiles/_topic_test_generate_messages_check_deps_add_int.dir/build
+.PHONY : _topic_test_generate_messages_check_deps_add_int/fast
+
+# Convenience name for target.
 topic_test/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
 	cd /home/a/ros1/ch2/build && $(MAKE) -f CMakeFiles/Makefile2 topic_test/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 .PHONY : topic_test/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
@@ -541,6 +601,21 @@ topic_test_generate_messages_eus: topic_test/CMakeFiles/topic_test_generate_mess
 topic_test_generate_messages_eus/fast:
 	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/topic_test_generate_messages_eus.dir/build.make topic_test/CMakeFiles/topic_test_generate_messages_eus.dir/build
 .PHONY : topic_test_generate_messages_eus/fast
+
+# Convenience name for target.
+topic_test/CMakeFiles/test_srv_cli.dir/rule:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f CMakeFiles/Makefile2 topic_test/CMakeFiles/test_srv_cli.dir/rule
+.PHONY : topic_test/CMakeFiles/test_srv_cli.dir/rule
+
+# Convenience name for target.
+test_srv_cli: topic_test/CMakeFiles/test_srv_cli.dir/rule
+
+.PHONY : test_srv_cli
+
+# fast build rule for target.
+test_srv_cli/fast:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/test_srv_cli.dir/build.make topic_test/CMakeFiles/test_srv_cli.dir/build
+.PHONY : test_srv_cli/fast
 
 # Convenience name for target.
 topic_test/CMakeFiles/test_pub.dir/rule:
@@ -602,6 +677,60 @@ topic_test_generate_messages_py/fast:
 	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/topic_test_generate_messages_py.dir/build.make topic_test/CMakeFiles/topic_test_generate_messages_py.dir/build
 .PHONY : topic_test_generate_messages_py/fast
 
+src/test_msg_pub.o: src/test_msg_pub.cpp.o
+
+.PHONY : src/test_msg_pub.o
+
+# target to build an object file
+src/test_msg_pub.cpp.o:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/test_msg_pub.dir/build.make topic_test/CMakeFiles/test_msg_pub.dir/src/test_msg_pub.cpp.o
+.PHONY : src/test_msg_pub.cpp.o
+
+src/test_msg_pub.i: src/test_msg_pub.cpp.i
+
+.PHONY : src/test_msg_pub.i
+
+# target to preprocess a source file
+src/test_msg_pub.cpp.i:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/test_msg_pub.dir/build.make topic_test/CMakeFiles/test_msg_pub.dir/src/test_msg_pub.cpp.i
+.PHONY : src/test_msg_pub.cpp.i
+
+src/test_msg_pub.s: src/test_msg_pub.cpp.s
+
+.PHONY : src/test_msg_pub.s
+
+# target to generate assembly for a file
+src/test_msg_pub.cpp.s:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/test_msg_pub.dir/build.make topic_test/CMakeFiles/test_msg_pub.dir/src/test_msg_pub.cpp.s
+.PHONY : src/test_msg_pub.cpp.s
+
+src/test_msg_sub.o: src/test_msg_sub.cpp.o
+
+.PHONY : src/test_msg_sub.o
+
+# target to build an object file
+src/test_msg_sub.cpp.o:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/test_msg_sub.dir/build.make topic_test/CMakeFiles/test_msg_sub.dir/src/test_msg_sub.cpp.o
+.PHONY : src/test_msg_sub.cpp.o
+
+src/test_msg_sub.i: src/test_msg_sub.cpp.i
+
+.PHONY : src/test_msg_sub.i
+
+# target to preprocess a source file
+src/test_msg_sub.cpp.i:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/test_msg_sub.dir/build.make topic_test/CMakeFiles/test_msg_sub.dir/src/test_msg_sub.cpp.i
+.PHONY : src/test_msg_sub.cpp.i
+
+src/test_msg_sub.s: src/test_msg_sub.cpp.s
+
+.PHONY : src/test_msg_sub.s
+
+# target to generate assembly for a file
+src/test_msg_sub.cpp.s:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/test_msg_sub.dir/build.make topic_test/CMakeFiles/test_msg_sub.dir/src/test_msg_sub.cpp.s
+.PHONY : src/test_msg_sub.cpp.s
+
 src/test_pub.o: src/test_pub.cpp.o
 
 .PHONY : src/test_pub.o
@@ -628,6 +757,60 @@ src/test_pub.s: src/test_pub.cpp.s
 src/test_pub.cpp.s:
 	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/test_pub.dir/build.make topic_test/CMakeFiles/test_pub.dir/src/test_pub.cpp.s
 .PHONY : src/test_pub.cpp.s
+
+src/test_srv_cli.o: src/test_srv_cli.cpp.o
+
+.PHONY : src/test_srv_cli.o
+
+# target to build an object file
+src/test_srv_cli.cpp.o:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/test_srv_cli.dir/build.make topic_test/CMakeFiles/test_srv_cli.dir/src/test_srv_cli.cpp.o
+.PHONY : src/test_srv_cli.cpp.o
+
+src/test_srv_cli.i: src/test_srv_cli.cpp.i
+
+.PHONY : src/test_srv_cli.i
+
+# target to preprocess a source file
+src/test_srv_cli.cpp.i:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/test_srv_cli.dir/build.make topic_test/CMakeFiles/test_srv_cli.dir/src/test_srv_cli.cpp.i
+.PHONY : src/test_srv_cli.cpp.i
+
+src/test_srv_cli.s: src/test_srv_cli.cpp.s
+
+.PHONY : src/test_srv_cli.s
+
+# target to generate assembly for a file
+src/test_srv_cli.cpp.s:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/test_srv_cli.dir/build.make topic_test/CMakeFiles/test_srv_cli.dir/src/test_srv_cli.cpp.s
+.PHONY : src/test_srv_cli.cpp.s
+
+src/test_srv_ser.o: src/test_srv_ser.cpp.o
+
+.PHONY : src/test_srv_ser.o
+
+# target to build an object file
+src/test_srv_ser.cpp.o:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/test_srv_ser.dir/build.make topic_test/CMakeFiles/test_srv_ser.dir/src/test_srv_ser.cpp.o
+.PHONY : src/test_srv_ser.cpp.o
+
+src/test_srv_ser.i: src/test_srv_ser.cpp.i
+
+.PHONY : src/test_srv_ser.i
+
+# target to preprocess a source file
+src/test_srv_ser.cpp.i:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/test_srv_ser.dir/build.make topic_test/CMakeFiles/test_srv_ser.dir/src/test_srv_ser.cpp.i
+.PHONY : src/test_srv_ser.cpp.i
+
+src/test_srv_ser.s: src/test_srv_ser.cpp.s
+
+.PHONY : src/test_srv_ser.s
+
+# target to generate assembly for a file
+src/test_srv_ser.cpp.s:
+	cd /home/a/ros1/ch2/build && $(MAKE) -f topic_test/CMakeFiles/test_srv_ser.dir/build.make topic_test/CMakeFiles/test_srv_ser.dir/src/test_srv_ser.cpp.s
+.PHONY : src/test_srv_ser.cpp.s
 
 src/test_sub.o: src/test_sub.cpp.o
 
@@ -662,11 +845,13 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install"
 	@echo "... edit_cache"
+	@echo "... test_srv_ser"
+	@echo "... test_msg_sub"
+	@echo "... install"
+	@echo "... test_msg_pub"
+	@echo "... test_sub"
 	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... install/strip"
-	@echo "... topic_test_generate_messages"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... topic_test_generate_messages_nodejs"
 	@echo "... install/local"
@@ -678,7 +863,6 @@ help:
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... topic_test_generate_messages_lisp"
-	@echo "... test_sub"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... topic_test_generate_messages_cpp"
@@ -691,16 +875,32 @@ help:
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... _topic_test_generate_messages_check_deps_person"
+	@echo "... install/strip"
+	@echo "... topic_test_generate_messages"
+	@echo "... _topic_test_generate_messages_check_deps_add_int"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... topic_test_gencpp"
 	@echo "... topic_test_generate_messages_eus"
+	@echo "... test_srv_cli"
 	@echo "... test_pub"
 	@echo "... topic_test_geneus"
 	@echo "... topic_test_genlisp"
 	@echo "... topic_test_generate_messages_py"
+	@echo "... src/test_msg_pub.o"
+	@echo "... src/test_msg_pub.i"
+	@echo "... src/test_msg_pub.s"
+	@echo "... src/test_msg_sub.o"
+	@echo "... src/test_msg_sub.i"
+	@echo "... src/test_msg_sub.s"
 	@echo "... src/test_pub.o"
 	@echo "... src/test_pub.i"
 	@echo "... src/test_pub.s"
+	@echo "... src/test_srv_cli.o"
+	@echo "... src/test_srv_cli.i"
+	@echo "... src/test_srv_cli.s"
+	@echo "... src/test_srv_ser.o"
+	@echo "... src/test_srv_ser.i"
+	@echo "... src/test_srv_ser.s"
 	@echo "... src/test_sub.o"
 	@echo "... src/test_sub.i"
 	@echo "... src/test_sub.s"

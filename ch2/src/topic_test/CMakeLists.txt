@@ -58,17 +58,16 @@ add_message_files(
   FILES
   person.msg
 )
-# 生成消息时依赖于 std_msgs
-generate_messages(
-  DEPENDENCIES
-  std_msgs
-)
+
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
+add_service_files(
+  FILES
+  # Service1.srv
+  # Service2.srv
+  add_int.srv
+)
+
+
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -82,6 +81,13 @@ generate_messages(
 #   DEPENDENCIES
 #   std_msgs
 # )
+
+# 生成消息时依赖于 std_msgs
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+)
+
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -226,5 +232,34 @@ target_link_libraries(test_pub
   ${catkin_LIBRARIES}
 )
 target_link_libraries(test_sub
+  ${catkin_LIBRARIES}
+)
+
+add_executable(test_msg_pub
+  src/test_msg_pub.cpp
+)
+add_executable(test_msg_sub
+  src/test_msg_sub.cpp
+)
+
+target_link_libraries(test_msg_pub
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(test_msg_sub
+  ${catkin_LIBRARIES}
+)
+
+
+add_executable(test_srv_ser
+  src/test_srv_ser.cpp
+)
+add_executable(test_srv_cli
+  src/test_srv_cli.cpp
+)
+
+target_link_libraries(test_srv_ser
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(test_srv_cli
   ${catkin_LIBRARIES}
 )

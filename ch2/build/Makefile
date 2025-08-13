@@ -285,6 +285,58 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named test_srv_ser
+
+# Build rule for target.
+test_srv_ser: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_srv_ser
+.PHONY : test_srv_ser
+
+# fast build rule for target.
+test_srv_ser/fast:
+	$(MAKE) -f topic_test/CMakeFiles/test_srv_ser.dir/build.make topic_test/CMakeFiles/test_srv_ser.dir/build
+.PHONY : test_srv_ser/fast
+
+#=============================================================================
+# Target rules for targets named test_msg_sub
+
+# Build rule for target.
+test_msg_sub: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_msg_sub
+.PHONY : test_msg_sub
+
+# fast build rule for target.
+test_msg_sub/fast:
+	$(MAKE) -f topic_test/CMakeFiles/test_msg_sub.dir/build.make topic_test/CMakeFiles/test_msg_sub.dir/build
+.PHONY : test_msg_sub/fast
+
+#=============================================================================
+# Target rules for targets named test_msg_pub
+
+# Build rule for target.
+test_msg_pub: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_msg_pub
+.PHONY : test_msg_pub
+
+# fast build rule for target.
+test_msg_pub/fast:
+	$(MAKE) -f topic_test/CMakeFiles/test_msg_pub.dir/build.make topic_test/CMakeFiles/test_msg_pub.dir/build
+.PHONY : test_msg_pub/fast
+
+#=============================================================================
+# Target rules for targets named test_sub
+
+# Build rule for target.
+test_sub: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_sub
+.PHONY : test_sub
+
+# fast build rule for target.
+test_sub/fast:
+	$(MAKE) -f topic_test/CMakeFiles/test_sub.dir/build.make topic_test/CMakeFiles/test_sub.dir/build
+.PHONY : test_sub/fast
+
+#=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_py
 
 # Build rule for target.
@@ -296,19 +348,6 @@ rosgraph_msgs_generate_messages_py: cmake_check_build_system
 rosgraph_msgs_generate_messages_py/fast:
 	$(MAKE) -f topic_test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make topic_test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named topic_test_generate_messages
-
-# Build rule for target.
-topic_test_generate_messages: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 topic_test_generate_messages
-.PHONY : topic_test_generate_messages
-
-# fast build rule for target.
-topic_test_generate_messages/fast:
-	$(MAKE) -f topic_test/CMakeFiles/topic_test_generate_messages.dir/build.make topic_test/CMakeFiles/topic_test_generate_messages.dir/build
-.PHONY : topic_test_generate_messages/fast
 
 #=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_lisp
@@ -426,19 +465,6 @@ topic_test_generate_messages_lisp: cmake_check_build_system
 topic_test_generate_messages_lisp/fast:
 	$(MAKE) -f topic_test/CMakeFiles/topic_test_generate_messages_lisp.dir/build.make topic_test/CMakeFiles/topic_test_generate_messages_lisp.dir/build
 .PHONY : topic_test_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named test_sub
-
-# Build rule for target.
-test_sub: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_sub
-.PHONY : test_sub
-
-# fast build rule for target.
-test_sub/fast:
-	$(MAKE) -f topic_test/CMakeFiles/test_sub.dir/build.make topic_test/CMakeFiles/test_sub.dir/build
-.PHONY : test_sub/fast
 
 #=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_nodejs
@@ -571,6 +597,32 @@ _topic_test_generate_messages_check_deps_person/fast:
 .PHONY : _topic_test_generate_messages_check_deps_person/fast
 
 #=============================================================================
+# Target rules for targets named topic_test_generate_messages
+
+# Build rule for target.
+topic_test_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 topic_test_generate_messages
+.PHONY : topic_test_generate_messages
+
+# fast build rule for target.
+topic_test_generate_messages/fast:
+	$(MAKE) -f topic_test/CMakeFiles/topic_test_generate_messages.dir/build.make topic_test/CMakeFiles/topic_test_generate_messages.dir/build
+.PHONY : topic_test_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named _topic_test_generate_messages_check_deps_add_int
+
+# Build rule for target.
+_topic_test_generate_messages_check_deps_add_int: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _topic_test_generate_messages_check_deps_add_int
+.PHONY : _topic_test_generate_messages_check_deps_add_int
+
+# fast build rule for target.
+_topic_test_generate_messages_check_deps_add_int/fast:
+	$(MAKE) -f topic_test/CMakeFiles/_topic_test_generate_messages_check_deps_add_int.dir/build.make topic_test/CMakeFiles/_topic_test_generate_messages_check_deps_add_int.dir/build
+.PHONY : _topic_test_generate_messages_check_deps_add_int/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_lisp
 
 # Build rule for target.
@@ -608,6 +660,19 @@ topic_test_generate_messages_eus: cmake_check_build_system
 topic_test_generate_messages_eus/fast:
 	$(MAKE) -f topic_test/CMakeFiles/topic_test_generate_messages_eus.dir/build.make topic_test/CMakeFiles/topic_test_generate_messages_eus.dir/build
 .PHONY : topic_test_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named test_srv_cli
+
+# Build rule for target.
+test_srv_cli: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_srv_cli
+.PHONY : test_srv_cli
+
+# fast build rule for target.
+test_srv_cli/fast:
+	$(MAKE) -f topic_test/CMakeFiles/test_srv_cli.dir/build.make topic_test/CMakeFiles/test_srv_cli.dir/build
+.PHONY : test_srv_cli/fast
 
 #=============================================================================
 # Target rules for targets named test_pub
@@ -683,8 +748,11 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... test_srv_ser"
+	@echo "... test_msg_sub"
+	@echo "... test_msg_pub"
+	@echo "... test_sub"
 	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... topic_test_generate_messages"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... topic_test_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_eus"
@@ -694,7 +762,6 @@ help:
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... topic_test_generate_messages_lisp"
-	@echo "... test_sub"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... topic_test_generate_messages_cpp"
@@ -705,9 +772,12 @@ help:
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... _topic_test_generate_messages_check_deps_person"
+	@echo "... topic_test_generate_messages"
+	@echo "... _topic_test_generate_messages_check_deps_add_int"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... topic_test_gencpp"
 	@echo "... topic_test_generate_messages_eus"
+	@echo "... test_srv_cli"
 	@echo "... test_pub"
 	@echo "... topic_test_geneus"
 	@echo "... topic_test_genlisp"

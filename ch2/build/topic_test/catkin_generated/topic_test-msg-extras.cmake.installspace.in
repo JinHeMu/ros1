@@ -1,2 +1,2 @@
 set(topic_test_MESSAGE_FILES "msg/person.msg")
-set(topic_test_SERVICE_FILES "")
+set(topic_test_SERVICE_FILES "srv/add_int.srv")

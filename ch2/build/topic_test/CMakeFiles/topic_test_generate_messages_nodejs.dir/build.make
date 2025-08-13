@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/a/ros1/ch2/build
 include topic_test/CMakeFiles/topic_test_generate_messages_nodejs.dir/progress.make
 
 topic_test/CMakeFiles/topic_test_generate_messages_nodejs: /home/a/ros1/ch2/devel/share/gennodejs/ros/topic_test/msg/person.js
+topic_test/CMakeFiles/topic_test_generate_messages_nodejs: /home/a/ros1/ch2/devel/share/gennodejs/ros/topic_test/srv/add_int.js
 
 
 /home/a/ros1/ch2/devel/share/gennodejs/ros/topic_test/msg/person.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
@@ -61,8 +62,14 @@ topic_test/CMakeFiles/topic_test_generate_messages_nodejs: /home/a/ros1/ch2/deve
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/a/ros1/ch2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from topic_test/person.msg"
 	cd /home/a/ros1/ch2/build/topic_test && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/a/ros1/ch2/src/topic_test/msg/person.msg -Itopic_test:/home/a/ros1/ch2/src/topic_test/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p topic_test -o /home/a/ros1/ch2/devel/share/gennodejs/ros/topic_test/msg
 
+/home/a/ros1/ch2/devel/share/gennodejs/ros/topic_test/srv/add_int.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/a/ros1/ch2/devel/share/gennodejs/ros/topic_test/srv/add_int.js: /home/a/ros1/ch2/src/topic_test/srv/add_int.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/a/ros1/ch2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from topic_test/add_int.srv"
+	cd /home/a/ros1/ch2/build/topic_test && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/a/ros1/ch2/src/topic_test/srv/add_int.srv -Itopic_test:/home/a/ros1/ch2/src/topic_test/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p topic_test -o /home/a/ros1/ch2/devel/share/gennodejs/ros/topic_test/srv
+
 topic_test_generate_messages_nodejs: topic_test/CMakeFiles/topic_test_generate_messages_nodejs
 topic_test_generate_messages_nodejs: /home/a/ros1/ch2/devel/share/gennodejs/ros/topic_test/msg/person.js
+topic_test_generate_messages_nodejs: /home/a/ros1/ch2/devel/share/gennodejs/ros/topic_test/srv/add_int.js
 topic_test_generate_messages_nodejs: topic_test/CMakeFiles/topic_test_generate_messages_nodejs.dir/build.make
 
 .PHONY : topic_test_generate_messages_nodejs

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "/home/a/ros1/ch2/devel/share/gennodejs/ros/topic_test/msg/person.js"
+  "/home/a/ros1/ch2/devel/share/gennodejs/ros/topic_test/srv/add_int.js"
   "CMakeFiles/topic_test_generate_messages_nodejs"
 )
 
