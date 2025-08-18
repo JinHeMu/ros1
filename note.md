@@ -36,11 +36,9 @@ sudo apt install git
 wget http://fishros.com/install -O fishros && . fishros
 ```
 
-# ROS1
+# ROS基操
 
-## ch1
-
-### 1.1创建工作空间并初始化
+### 1 创建工作空间并初始化
 
 ```
 mkdir -p 自定义空间名称/src #如果没有 -p 选项，当你要创建的目录的上级目录不存在时，命令会报错
@@ -48,7 +46,7 @@ cd 自定义空间名称
 catkin_make
 ```
 
-### 1.2进入 src 创建 ros 包并添加依赖
+### 2 进入 src 创建 ros 包并添加依赖
 
 ```
 cd src
@@ -59,7 +57,47 @@ catkin_create_pkg 自定义ROS包名 roscpp rospy std_msgs
 
 - **pwd** 输出当前目录路径
 
-### 1.3创建可执行文件
+### 3 创建可执行文件
 
+- 进入 ros 包的 src 目录编辑源文件
+- 编辑 ros 包下的 Cmakelist.txt文件
 
+```cmake
+add_executable(步骤3的源文件名
+  src/步骤3的源文件名.cpp
+)
+target_link_libraries(步骤3的源文件名
+  ${catkin_LIBRARIES}
+)
+```
+
+- 进入工作空间目录并编译
+
+```cmake
+cd 自定义空间名称
+catkin_make
+```
+
+### 4 执行
+
+```bash
+roscore #bash1
+cd 工作空间
+source ./devel/setup.bash
+rosrun 包名 C++节点 #bash2
+```
+
+# 自定义消息
+
+## 1.创建新软件包
+
+依赖项：``message_generation``、``message_runtime``
+
+## 2.添加msg目录
+
+以.msg结尾，首字母大写
+
+## 3.修改CMakeLists
+
+## 4. 修改package.xml
 

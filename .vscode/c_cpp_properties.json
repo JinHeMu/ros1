@@ -5,6 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/opt/ros/noetic/**",
+                "${workspaceFolder}/ch3/devel/include",
                 "${workspaceFolder}/ch2/devel/include"
             ],
             "defines": [],

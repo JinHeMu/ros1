@@ -1,2 +1,2 @@
-lidar_pkg:vel_pkg:wpr_simulation
+imu_pkg:lidar_pkg:map_pkg:nav_pkg:qq_msgs:slam_pkg:vel_pkg:wpb_home/wpb_home_behaviors:wpb_home/wpb_home_bringup:wpb_home/wpb_home_python:wpb_home/wpb_home_python3:wpb_home/wpb_home_remote:wpb_home/wpb_home_tutorials:wpb_home/wpbh_local_planner:wpr_simulation:wzry_pkg
 -DCATKIN_DEVEL_PREFIX=/home/a/ros1/ch3/devel -DCMAKE_INSTALL_PREFIX=/home/a/ros1/ch3/install -G Unix Makefiles

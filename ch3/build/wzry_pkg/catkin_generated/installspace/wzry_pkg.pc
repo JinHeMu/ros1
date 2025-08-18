@@ -1,0 +1,8 @@
+prefix=/home/a/ros1/ch3/install
+
+Name: wzry_pkg
+Description: Description of wzry_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

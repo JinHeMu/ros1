@@ -11,5 +11,6 @@ export CMAKE_PREFIX_PATH="/home/a/ros1/ch3/devel:$CMAKE_PREFIX_PATH"
 export LD_LIBRARY_PATH="/home/a/ros1/ch3/devel/lib:$LD_LIBRARY_PATH"
 export PKG_CONFIG_PATH='/home/a/ros1/ch3/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig:/usr/local/OpenCV/lib/pkgconfig'
 export PWD='/home/a/ros1/ch3/build'
+export PYTHONPATH="/home/a/ros1/ch3/devel/lib/python3/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES='/home/a/ros1/ch3/devel/share/common-lisp'
 export ROS_PACKAGE_PATH="/home/a/ros1/ch3/src:$ROS_PACKAGE_PATH"
